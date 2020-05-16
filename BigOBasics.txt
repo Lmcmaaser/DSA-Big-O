@@ -1,0 +1,40 @@
+Use Big O notation to measure the performance of different algorithms
+  -is a way of describing the time complexity of an algorithm
+  -helps us understand how a given algorithm will perform in the best-case scenario, in the worst-case scenario, and on average.
+  -gives us a vocabulary for describing how the complexity of an algorithm grows as the size of its input grows.
+
+Algorithm performance can be analyzed in terms of space or time.
+Space complexity
+  refers to the amount of physical memory that an algorithm requires to complete. If you understand recursion, you have an intuitive understanding of what space complexity is about. You end up with a stack of recursive function calls, each waiting for its child process to return a value. Each function in the stack takes up space in memory.
+
+Time complexity
+  refers to the number of operations an algorithm requires to complete. In this lesson, we'll be concerned with analyzing time complexity.
+
+Big O classifications
+Constant time O(1)
+  No matter the size of your input, the algorithm will take the same amount of time to complete. Examples of O(1) algorithms are accessing an array item or performing basic arithmetic operations (e.g., adding 2 numbers).
+
+Logarithmic time O(log(n))
+  Logarithmic time complexity algorithms take longer with larger inputs, but running time increases slowly. For instance, if myLogRunTimeAlgo takes 1 second to complete with an input of size 10, when we increase our input by 10x to 100, the running time only grows to 2 seconds. When we increase the input size to 1000, the time only grows to 3 seconds.
+
+  It is also characteristic of logarithmic algorithms that they cut the problem size in half each round through.
+
+Linear time O(n)
+  Algorithms with linear time complexity (O(n)) have running times that are directly proportional to the size (n) of the input. Given input a and input b, where b is twice as large as a, it will take a linear algorithm 2 times as long to process b compared to a.
+
+  Some examples of linear complexity algorithms are summing the elements in an array and finding the minimum or maximum value in an array.
+
+Polynomial time O(n^k)
+  An algorithm with polynomial time complexity has a running time that would be some input size n raised to some constant power k. The easiest way to understand polynomial time complexity is with nested loops. An algorithm that requires 2 levels of looping over an input would be O(n^2) while one requiring 3 levels of looping would be O(n^3). In both cases, we have polynomial time complexity.
+
+Exponential time O(2^n)
+  Algorithms with exponential time complexity (O(2^n)) have running times that grow rapidly with any increase in input size. For an input of size 2, an exponential time algorithm will take 2^2 = 4 time. With an input of size 10, the same algorithm will take 2^10 = 1024 time, and with an input of size 100, it will take 2^100 = 1.26765060022823 * 1030 time.
+
+This table also shows the number of operations required by different time complexities with inputs of size 10, 100, and 1000:
+
+  Big-O Notation	n = 10	n = 100	n = 1000
+  O(1)	1	1	1
+  O(log n)	3	6	9
+  O(n)	10	100	1000
+  O(n^2)	100	10000	1000000
+  O(2^n)	1024	2^100	2^1000

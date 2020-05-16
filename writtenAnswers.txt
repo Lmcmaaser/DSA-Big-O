@@ -36,7 +36,7 @@ function areYouHere(arr1, arr2) {
   return false;
 }
 
-  Answer: O(n^2) - nested loop, runtimes grow with increase in input size
+  Answer: O(n^2) - polynomial time, nested loop, runtimes grow with increase in input size
 
 4) Doubler
 function doubleArrayValues(array) {
